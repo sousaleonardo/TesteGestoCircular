@@ -82,9 +82,20 @@
     }
     
     //faz a rotação da imagem e e atualiza a caixa de texto
+    [self->imagem layoutIfNeeded];
+    
     self->imagem.transform = CGAffineTransformMakeRotation(self->anguloImagem * M_PI/180);
     
     [self atualizaTexto];
+    
+    /* self->imagem.image.ro
+    
+    [UIView animateWithDuration:5.0 animations:^{
+        self.heightCon.constant = 200
+        [self.view layoutIfNeeded];
+    }];
+     
+     */
 }
 
 -(void)anguloFinal:(CGFloat)angulo{

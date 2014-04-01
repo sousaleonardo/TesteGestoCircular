@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9437485018EB6C2400742417 /* botao.png in Resources */ = {isa = PBXBuildFile; fileRef = 9437484F18EB6C2400742417 /* botao.png */; };
 		943EFB8318E9F12C00486835 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 943EFB8218E9F12C00486835 /* Foundation.framework */; };
 		943EFB8518E9F12C00486835 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 943EFB8418E9F12C00486835 /* CoreGraphics.framework */; };
 		943EFB8718E9F12C00486835 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 943EFB8618E9F12C00486835 /* UIKit.framework */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9437484F18EB6C2400742417 /* botao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = botao.png; sourceTree = "<group>"; };
 		943EFB7F18E9F12C00486835 /* TesteGestoCircular.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TesteGestoCircular.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		943EFB8218E9F12C00486835 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		943EFB8418E9F12C00486835 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -117,6 +119,7 @@
 		943EFB8818E9F12C00486835 /* TesteGestoCircular */ = {
 			isa = PBXGroup;
 			children = (
+				9437484F18EB6C2400742417 /* botao.png */,
 				C5DFFDA818EA7CAA0089E16D /* Button.png */,
 				943EFB9118E9F12C00486835 /* AppDelegate.h */,
 				943EFB9218E9F12C00486835 /* AppDelegate.m */,
@@ -237,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				943EFB9B18E9F12C00486835 /* Images.xcassets in Resources */,
+				9437485018EB6C2400742417 /* botao.png in Resources */,
 				C5DFFDA918EA7CAA0089E16D /* Button.png in Resources */,
 				943EFB8D18E9F12C00486835 /* InfoPlist.strings in Resources */,
 				943EFB9618E9F12C00486835 /* Main.storyboard in Resources */,
