@@ -1,23 +1,56 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4451" systemVersion="13A461" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3676"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7PA-bD-gd3"/>
+                        <viewControllerLayoutGuide type="bottom" id="dsr-qe-m5h"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="66Z-DS-0xg">
+                                <rect key="frame" x="78" y="-46" width="26" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Button.png" translatesAutoresizingMaskIntoConstraints="NO" id="umD-tm-c71">
+                                <rect key="frame" x="68" y="450" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="G9V-dD-Ugt"/>
+                                    <constraint firstAttribute="width" constant="50" id="iOn-ox-8YQ"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="66Z-DS-0xg" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="78" id="D2r-F9-maX"/>
+                            <constraint firstItem="umD-tm-c71" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="68" id="F4F-jc-K1T"/>
+                            <constraint firstItem="dsr-qe-m5h" firstAttribute="top" secondItem="umD-tm-c71" secondAttribute="bottom" constant="68" id="XHP-KH-OSK"/>
+                            <constraint firstItem="7PA-bD-gd3" firstAttribute="top" secondItem="66Z-DS-0xg" secondAttribute="bottom" constant="36" id="hDO-1m-atF"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imagem" destination="umD-tm-c71" id="boS-rs-0CU"/>
+                        <outlet property="textoSaida" destination="66Z-DS-0xg" id="U7N-CB-aAa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="Button.png" width="146" height="146"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

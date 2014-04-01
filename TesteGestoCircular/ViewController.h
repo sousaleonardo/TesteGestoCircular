@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GestoCircular.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <GestocircularDelegate>
+
+@property (nonatomic,strong)IBOutlet UIImageView *imagem;
+@property (nonatomic,strong)IBOutlet UITextField *textoSaida;
 
 @end

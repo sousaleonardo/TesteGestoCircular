@@ -21,6 +21,8 @@
 		943EFBA418E9F12C00486835 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 943EFB8618E9F12C00486835 /* UIKit.framework */; };
 		943EFBAC18E9F12C00486835 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 943EFBAA18E9F12C00486835 /* InfoPlist.strings */; };
 		943EFBAE18E9F12C00486835 /* TesteGestoCircularTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 943EFBAD18E9F12C00486835 /* TesteGestoCircularTests.m */; };
+		943EFBB918E9F13800486835 /* GestoCircular.m in Sources */ = {isa = PBXBuildFile; fileRef = 943EFBB818E9F13800486835 /* GestoCircular.m */; };
+		C5DFFDA918EA7CAA0089E16D /* Button.png in Resources */ = {isa = PBXBuildFile; fileRef = C5DFFDA818EA7CAA0089E16D /* Button.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,9 @@
 		943EFBA918E9F12C00486835 /* TesteGestoCircularTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TesteGestoCircularTests-Info.plist"; sourceTree = "<group>"; };
 		943EFBAB18E9F12C00486835 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		943EFBAD18E9F12C00486835 /* TesteGestoCircularTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TesteGestoCircularTests.m; sourceTree = "<group>"; };
+		943EFBB718E9F13800486835 /* GestoCircular.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestoCircular.h; sourceTree = "<group>"; };
+		943EFBB818E9F13800486835 /* GestoCircular.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestoCircular.m; sourceTree = "<group>"; };
+		C5DFFDA818EA7CAA0089E16D /* Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,11 +117,14 @@
 		943EFB8818E9F12C00486835 /* TesteGestoCircular */ = {
 			isa = PBXGroup;
 			children = (
+				C5DFFDA818EA7CAA0089E16D /* Button.png */,
 				943EFB9118E9F12C00486835 /* AppDelegate.h */,
 				943EFB9218E9F12C00486835 /* AppDelegate.m */,
 				943EFB9418E9F12C00486835 /* Main.storyboard */,
 				943EFB9718E9F12C00486835 /* ViewController.h */,
 				943EFB9818E9F12C00486835 /* ViewController.m */,
+				943EFBB718E9F13800486835 /* GestoCircular.h */,
+				943EFBB818E9F13800486835 /* GestoCircular.m */,
 				943EFB9A18E9F12C00486835 /* Images.xcassets */,
 				943EFB8918E9F12C00486835 /* Supporting Files */,
 			);
@@ -229,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				943EFB9B18E9F12C00486835 /* Images.xcassets in Resources */,
+				C5DFFDA918EA7CAA0089E16D /* Button.png in Resources */,
 				943EFB8D18E9F12C00486835 /* InfoPlist.strings in Resources */,
 				943EFB9618E9F12C00486835 /* Main.storyboard in Resources */,
 			);
@@ -250,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				943EFB9918E9F12C00486835 /* ViewController.m in Sources */,
+				943EFBB918E9F13800486835 /* GestoCircular.m in Sources */,
 				943EFB9318E9F12C00486835 /* AppDelegate.m in Sources */,
 				943EFB8F18E9F12C00486835 /* main.m in Sources */,
 			);
@@ -460,6 +470,7 @@
 				943EFBB318E9F12C00486835 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		943EFBB418E9F12C00486835 /* Build configuration list for PBXNativeTarget "TesteGestoCircularTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +479,7 @@
 				943EFBB618E9F12C00486835 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
