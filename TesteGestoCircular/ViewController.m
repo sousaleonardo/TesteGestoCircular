@@ -116,19 +116,27 @@
     
     [self->imagem setCenter:pontoMedio];
     
-    SEL alteraVolume=@selector(alteraVolume:);
-    
+    SEL alterarVolume=@selector(alterarVolume:);
+    SEL play=@selector(playEstacao);
     //adiciona o /3 no fora Raio para que ele aceite até no max 1/3 do raio do circ p dentro
     //self->gestoCircular=[[GestoCircular alloc]initWithPontoMedio:pontoMedio raioMedio:foraRaio/5 foraRaio:foraRaio target:self ];
     
-    self->gestoCircular=[[GestoCircular alloc]initWithPontoMedio:pontoMedio raioMedio:foraRaio/5 foraRaio:foraRaio target:self seletor:alteraVolume]
+//    self->gestoCircular=[[GestoCircular alloc]initWithPontoMedio:pontoMedio raioMedio:foraRaio/5 foraRaio:foraRaio target:self seletor:alterarVolume];
+    
+    self->gestoCircular=[[GestoCircular alloc]initWithPontoMedio:pontoMedio raioMedio:foraRaio/5 foraRaio:foraRaio target:self selManipulaArray:alterarVolume selPlay:play];
     
     [self.view addGestureRecognizer:gestoCircular];
-
 }
 
--(void)alteraVolume:(int)valor{
+-(void)alterarVolume:(NSNumber*)valor{
+    
+    NSLog(@"%@",valor);
+    
     NSLog(@"feliz");
+}
+
+-(void)playEstacao{
+    NSLog(@"Deu play na estacao");
 }
 
 @end

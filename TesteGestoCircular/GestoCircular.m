@@ -19,17 +19,19 @@
 }
 
 -(id) initWithPontoMedio: (CGPoint) _pontoMedio
-raioMedio: (CGFloat) _raioMedio
-foraRaio: (CGFloat) _foraRaio
-target: (id <GestocircularDelegate>)_target
-                 seletor: (SEL) _SEL{
+               raioMedio: (CGFloat) _raioMedio
+                foraRaio: (CGFloat) _foraRaio
+                  target: (id <GestocircularDelegate>)_target
+        selManipulaArray: (SEL) _selManipulaArray
+                 selPlay: (SEL) _selPlay{
     
     if ((self=[super initWithTarget:_target action:Nil])) {
         self-> pontoMedio = _pontoMedio;
         self-> raioMedio = _raioMedio;
         self-> foraRaio = _foraRaio;
         self-> target = _target;
-        self->seletor=_SEL;
+        self->selManipularArray=_selManipulaArray;
+        self->selPlay=_selPlay;
     }
     
     return self;
@@ -94,14 +96,12 @@ target: (id <GestocircularDelegate>)_target
         //Chama o delegate
         if ([self->target respondsToSelector:@selector(rotacao:)]) {
             [self->target rotacao:angulo];
-        }/*else if ([self->target respondsToSelector:@selector(alteraVolume:)]){
-            [self->target alteraVolume:angulo];
-        }else if ([self->target respondsToSelector:<#(SEL)#>]){
-            
-        }*/
-        if (YES ) {
-            [self->target performSelector:self->seletor withObject:Nil];
+        }
         
+        NSNumber *anguloConvertido=[[NSNumber alloc]initWithFloat:angulo];
+        
+        if (self->selManipularArray != Nil ) {
+            [self->target performSelector:self->selManipularArray withObject:anguloConvertido];
         }
         
     }else{
@@ -114,10 +114,13 @@ target: (id <GestocircularDelegate>)_target
     [super touchesEnded:touches withEvent:event];
     
     if (self.state == UIGestureRecognizerStatePossible) {
+        
         [self setState:UIGestureRecognizerStateRecognized];
         
-        if ([self->target respondsToSelector:@selector(anguloFinal:)]) {
-            [target anguloFinal:anguloAcumulado];
+        if (self->selPlay != Nil) {
+            if ([self->target respondsToSelector:self->selPlay]) {
+                [target performSelector:self->selPlay];
+            }
         }
     }else{
         [self setState:UIGestureRecognizerStateFailed];
