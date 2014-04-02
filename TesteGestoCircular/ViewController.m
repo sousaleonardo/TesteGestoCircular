@@ -58,6 +58,8 @@
 //Remove o gesto reconizer antes de girar a tela para não configurar a area do circulo de forma errada
 -(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration{
     
+    //Basicamente liga as constraints
+    [self->imagem setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self.view removeGestureRecognizer:gestoCircular];
     
     self->anguloImagem=0;
@@ -81,21 +83,15 @@
         self->anguloImagem +=360;
     }
     
+    //Basicamente desliga as constraints //
+    [self->imagem setTranslatesAutoresizingMaskIntoConstraints:YES];
+    
     //faz a rotação da imagem e e atualiza a caixa de texto
     [self->imagem layoutIfNeeded];
     
     self->imagem.transform = CGAffineTransformMakeRotation(self->anguloImagem * M_PI/180);
     
     [self atualizaTexto];
-    
-    /* self->imagem.image.ro
-    
-    [UIView animateWithDuration:5.0 animations:^{
-        self.heightCon.constant = 200
-        [self.view layoutIfNeeded];
-    }];
-     
-     */
 }
 
 -(void)anguloFinal:(CGFloat)angulo{
@@ -111,26 +107,28 @@
 -(void)SetGestoReconizer{
     
     CGPoint pontoMedio = [self->imagem center];
+    CGFloat foraRaio = self->imagem.frame.size.width / 2;
     
-    NSLog(@"%f",pontoMedio.x);
-    NSLog(@"%f",pontoMedio.y);
-    
+    //Garante que o centro do ponto seja o correto mesmo que altere o layout
     [self->imagem layoutIfNeeded];
     
     pontoMedio = [self->imagem center];
     
     [self->imagem setCenter:pontoMedio];
     
-    NSLog(@"%f",pontoMedio.x);
-    NSLog(@"%f",pontoMedio.y);
-    
-    CGFloat foraRaio = self->imagem.frame.size.width / 2;
+    SEL alteraVolume=@selector(alteraVolume:);
     
     //adiciona o /3 no fora Raio para que ele aceite até no max 1/3 do raio do circ p dentro
-    self->gestoCircular=[[GestoCircular alloc]initWithPontoMedio:pontoMedio raioMedio:foraRaio/5 foraRaio:foraRaio target:self];
+    //self->gestoCircular=[[GestoCircular alloc]initWithPontoMedio:pontoMedio raioMedio:foraRaio/5 foraRaio:foraRaio target:self ];
+    
+    self->gestoCircular=[[GestoCircular alloc]initWithPontoMedio:pontoMedio raioMedio:foraRaio/5 foraRaio:foraRaio target:self seletor:alteraVolume]
     
     [self.view addGestureRecognizer:gestoCircular];
 
+}
+
+-(void)alteraVolume:(int)valor{
+    NSLog(@"feliz");
 }
 
 @end

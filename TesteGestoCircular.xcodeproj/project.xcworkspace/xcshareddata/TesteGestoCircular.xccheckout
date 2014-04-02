@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>8030C06C-FB8A-4D6C-A17A-6D3CD417C06D</string>
+	<key>IDESourceControlProjectName</key>
+	<string>TesteGestoCircular</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>520C791B-DB5E-4EB2-987A-3308233CA6DC</key>
+		<string>https://github.com/sousaleonardo/TesteGestoCircular.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>TesteGestoCircular.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>520C791B-DB5E-4EB2-987A-3308233CA6DC</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/sousaleonardo/TesteGestoCircular.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>520C791B-DB5E-4EB2-987A-3308233CA6DC</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>520C791B-DB5E-4EB2-987A-3308233CA6DC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>TesteGestoCircular</string>
+		</dict>
+	</array>
+</dict>
+</plist>

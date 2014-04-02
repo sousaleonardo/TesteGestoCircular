@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -23,24 +23,35 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="botao.png" translatesAutoresizingMaskIntoConstraints="NO" id="umD-tm-c71">
-                                <rect key="frame" x="68" y="450" width="50" height="50"/>
+                                <rect key="frame" x="46" y="430" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="G9V-dD-Ugt"/>
-                                    <constraint firstAttribute="width" constant="50" id="iOn-ox-8YQ"/>
+                                    <constraint firstAttribute="height" constant="50" id="QP4-Mg-tq9"/>
+                                    <constraint firstAttribute="width" constant="50" id="nSP-7B-mxF"/>
+                                </constraints>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="botao.png" translatesAutoresizingMaskIntoConstraints="NO" id="4AP-f1-qd1">
+                                <rect key="frame" x="234" y="430" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="3Zd-Gv-QOI"/>
+                                    <constraint firstAttribute="height" constant="50" id="dnq-2T-wOA"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="dsr-qe-m5h" firstAttribute="top" secondItem="4AP-f1-qd1" secondAttribute="bottom" constant="88" id="8j0-TL-Z1y"/>
                             <constraint firstItem="66Z-DS-0xg" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="78" id="D2r-F9-maX"/>
-                            <constraint firstItem="umD-tm-c71" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="68" id="F4F-jc-K1T"/>
-                            <constraint firstItem="dsr-qe-m5h" firstAttribute="top" secondItem="umD-tm-c71" secondAttribute="bottom" constant="68" id="XHP-KH-OSK"/>
+                            <constraint firstItem="dsr-qe-m5h" firstAttribute="top" secondItem="umD-tm-c71" secondAttribute="bottom" constant="88" id="O6a-LJ-0i0"/>
                             <constraint firstItem="7PA-bD-gd3" firstAttribute="top" secondItem="66Z-DS-0xg" secondAttribute="bottom" constant="36" id="hDO-1m-atF"/>
+                            <constraint firstItem="umD-tm-c71" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="46" id="qwJ-h1-XVN"/>
+                            <constraint firstAttribute="trailing" secondItem="4AP-f1-qd1" secondAttribute="trailing" constant="36" id="v11-1A-mNY"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="imagem" destination="umD-tm-c71" id="boS-rs-0CU"/>
+                        <outlet property="botaoEstacao" destination="4AP-f1-qd1" id="j7B-RT-Sjx"/>
+                        <outlet property="imagem" destination="umD-tm-c71" id="FyR-nb-KIs"/>
                         <outlet property="textoSaida" destination="66Z-DS-0xg" id="U7N-CB-aAa"/>
                     </connections>
                 </viewController>

@@ -12,6 +12,11 @@
 @optional
 -(void)rotacao: (CGFloat)angulo;
 -(void)anguloFinal :(CGFloat)angulo;
+
+//Controles de volume e estacao
+-(void)alteraVolume:(int)valor;
+-(void)alteraEstacao:(int)valor;
+
 @end
 
 @interface GestoCircular : UIGestureRecognizer
@@ -21,14 +26,17 @@
     CGFloat foraRaio;
     CGFloat raioMedio;
     CGFloat anguloAcumulado;
-    
+
     id<GestocircularDelegate> target;
+    
+    SEL seletor;
 }
 
 -(id) initWithPontoMedio: (CGPoint) _pontoMedio
                raioMedio: (CGFloat) _raioMedio
                 foraRaio: (CGFloat) _foraRaio
-                  target: (id <GestocircularDelegate>)_target;
+                  target: (id <GestocircularDelegate>)_target
+                 seletor: (SEL) _SEL;
 
 @end
 
